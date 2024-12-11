@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polícia Civil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>POLÍCIA CIVIL</h1>
+    
+    <form id="questionsForm">
+        <label for="autoridadePolicial">Autoridade Policial:</label>
+        <input type="text" id="autoridadePolicial" name="autoridadePolicial" required><br><br>
+
+        <label for="unidade">Unidade:</label>
+        <input type="text" id="unidade" name="unidade" required><br><br>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" required><br><br>
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required><br><br>
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required><br><br>
+
+        <label for="assunto">Assunto:</label>
+        <textarea id="assunto" rows="6" cols="67" placeholder="Descreva o Assunto aqui..."></textarea><br><br>
+
+        <label for="descricao">Descrição das Acusações:</label>
+        <textarea id="descricao" rows="6" cols="67" placeholder="Descreva as acusações aqui..."></textarea><br><br>
+        
+        <label for="solicitacaoMedidas">Solicitação de Medidas:</label>
+        <textarea id="solicitacaoMedidas" rows="6" cols="67" placeholder="Descreva a solicitação de medidas aqui..."></textarea><br><br>
+
+        <label for="tipificacao">Processo de instância penal - Tipificação:</label>
+        <textarea id="tipificacao" rows="6" cols="67" placeholder="Descreva a tipificação do crime aqui..."></textarea><br><br>
+
+        <label for="instanciaTipificacao">Processo de Instância Interna - Tipificação:</label>
+        <textarea id="instanciaTipificacao" rows="6" cols="67" placeholder="Descreva a tipificação de instância interna aqui..."></textarea><br><br>
+
+        <div id="signatureSection" style="text-align: center; margin-top: 40px;">
+            <h3>Assinatura</h3>
+            <div id="signatureCanvasContainer" style="position: relative; display: inline-block; border: 2px solid #f7f100; padding: 10px;">
+                <canvas id="signatureCanvas" width="300" height="100" style="border: 1px solid #ccc;"></canvas>
+                <button type="button" id="clearSignature" style="position: absolute; top: 105px; right: 1px; padding: 5px 15px; background-color: #f7f100; color: #001f3d; border: none; font-size: 0.9em; cursor: pointer;">Limpar assinatura</button>
+            </div>
+        </div>
+
+        <button type="submit" id="generatePdfBtn" style="margin-top: 30px;">GERAR PDF</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="base64.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
